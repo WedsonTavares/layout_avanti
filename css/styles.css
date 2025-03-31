@@ -1,0 +1,399 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
+
+
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do body */
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #e6e7e9;
+    overflow-x: hidden; /* Impede a barra de rolagem horizontal */
+}
+
+/* Header */
+header {
+    background-color: FFFFFF;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+header nav button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.logotipo img {
+    width: 152.58px;
+    height: 27.08px;
+}
+
+/* Faixa de desconto */
+.desconto i {
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.desconto strong {
+    width: 63px;
+    height: 16px;
+    border-radius: 4px;
+    background-color: #6220c1;
+}
+
+.desconto {
+    width: 100%;
+    font-size: 13px;
+    color: #FFFFFF;
+    background-color: #005CFF;
+    height: 30px;
+    text-align: center;
+    padding: 4px;
+    line-height: 22px;
+    white-space: nowrap;
+}
+
+/* Menu */
+.menu {
+    margin-top: 20px;
+}
+
+.menu button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.menu ul {
+    list-style: none;
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.menu ul.hidden {
+    display: none; /* Esconde o menu inicialmente */
+}
+
+.menu ul li {
+    padding: 5px 0;
+}
+
+/* Lançamentos */
+.lancamentos {
+    padding: 20px;
+    text-align: center;
+}
+
+.lancamentos h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Imagem e texto sobreposto */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.image-text {
+    width: 41px;
+    height: 18px;
+    position: absolute;
+    top: 1px !important;
+    left: 1px !important;
+    background-color: #00264e; /* Fundo semitransparente */
+    color: #FFFFFF !important;
+    border-radius: 4px;
+    font-size: 12px !important;
+}
+
+/* Produtos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Alinha os produtos em colunas */
+    gap: 20px;
+    justify-items: center;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.product img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.preco {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+    text-decoration: line-through; /* Adiciona sublinhado ao texto */
+}
+
+.product p strong {
+    font-weight: bold;
+    color: #000;
+}
+
+.product button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+
+.blur {
+    position: relative;
+    display: inline-block;
+    width: 100%; 
+}
+
+.blur img {
+    width: 100%; 
+    height: auto;
+}
+
+.blur h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #005CFF;
+    color: white; 
+    text-align: center;
+    padding: 10px; 
+    width: 100%; 
+    height: 50px;
+    font-size: 22px; 
+    font-weight: 500;
+}
+
+/* Supersale */
+.supersale {
+    position: relative; /* Define a posição relativa para ajustar os elementos */
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f4f4f4; /* Cor de fundo */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    background-color: #e6e7e9;
+}
+
+.supersale-content {
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.supersale-img {
+    width: 385px; /* Largura da imagem */
+    height: 510px; /* Altura da imagem */
+    position: absolute; /* Permite posicionar a imagem */
+    top: 148px; /* Distância do topo */
+    left: 315px; /* Distância da esquerda */
+    mix-blend-mode: darken; /* Aplica o efeito de blend "darken" */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+}
+
+.supersale-text {
+    position: relative; /* Define a posição relativa para o texto */
+    z-index: 1; /* Garante que o texto fique acima da imagem */
+    text-align: center; /* Centraliza o texto */
+}
+
+.supersale-text h2 {
+    font-size: 5.5rem; /* Tamanho proporcional ao destaque */
+
+    color: black; /* Cor preta para o título */
+    margin: 0; /* Remove margens */
+}
+
+
+
+.supersale-text p {
+    font-size: 3.5rem; /* Tamanho 50% menor */
+    color: #005CFF; /* Azul para o texto */
+    margin: 10px 0 0; /* Espaçamento acima */
+}
+
+ .highlight-blue {
+    font-weight: bold; /* Negrito para o destaque */
+    color: #005CFF; /* Azul para "50% OFF" */
+    font-weight: 700;
+    font-size: 7rem;
+
+}
+
+.newsletter-p {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: blue;
+    font-size: 20px;
+    font-weight: 600; 
+}
+
+.newsletter-p strong {
+    color: black; /* Define a cor preta para o texto dentro do <strong> */
+}
+
+.newsletter-p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    top: 100px;    
+}
+
+.contact-form {
+    width: 75%; 
+    height: 176px;
+    margin: 0 auto; 
+    text-align: center; 
+    padding: 20px; 
+    border-radius: 8px; 
+    align-items: center;
+    justify-content: center;
+    background-color: #dedede; /* Cor de fundo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+.contact-form form {
+    display: flex; /* Ativa o Flexbox */
+    flex-wrap: nowrap; /* Garante que os elementos fiquem em uma única linha */
+    gap: 10px; /* Espaçamento entre os elementos */
+    align-items: center; /* Alinha os elementos verticalmente */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+
+    flex: 1; /* Faz os inputs ocuparem o mesmo espaço */
+    min-width: 150px; /* Define uma largura mínima */
+    height: 48px; /* Altura dos inputs */
+    border: 1px solid #ddd; /* Borda dos inputs */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 14px; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+}
+
+.contact-form label {
+    display: flex;
+    align-items: center; /* Alinha o checkbox e o texto verticalmente */
+    gap: 5px; /* Espaçamento entre o checkbox e o texto */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #555; /* Cor do texto */
+}
+
+.contact-form button {
+    height: 48px; /* Altura do botão */
+    background-color: #005CFF; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    padding: 0 20px; /* Espaçamento interno horizontal */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.contact-form button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+/* Lorem Ipsum */
+.lorem-ipsum {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.lorem-ipsum .image img {
+    width: 40%;
+    border-radius: 5px;
+}
+
+.lorem-ipsum .text {
+    width: 50%;
+}
+
+/* Footer */
+footer {
+    width: 100%; /* Garante que o footer ocupe toda a largura da página */
+    padding: 20px 0;
+    text-align: center;
+    position: relative; /* Mantém o footer no fluxo normal da página */
+    bottom: 0;
+    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos no cálculo da largura */
+    overflow: hidden; /* Evita que o conteúdo do footer ultrapasse os limites */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px; /* Reduz o padding em telas menores */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+}
