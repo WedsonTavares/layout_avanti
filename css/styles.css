@@ -14,38 +14,83 @@ body {
 }
 
 header {
-    background-color: FFFFFF;
-    color: white;
+    background-color: #FFFFFF;
+    color: #333;
     padding: 15px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
 }
 
-header nav input {
-    padding: 10px;
-    width: 300px;
-    border-radius: 5px;
+header .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 10px;
+}
+
+header .logotipo img {
+    width: 150px;
+    height: auto;
+}
+
+.header-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza a navegação */
+    margin-top: 10px; /* Espaçamento entre a linha superior e a navegação */
+}
+
+header .menu {
+    display: flex;
+    flex-direction: column; /* Organiza o botão e o menu em coluna */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+header .menu button {
+    font-weight: bold;
+    background-color: transparent;
     border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+    display: block; /* Garante que o botão apareça em todas as telas */
 }
 
-header nav button {
+header .menu button:hover {
+    color: #007BFF;
+}
+
+header .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Exibe os itens em linha por padrão */
+    flex-direction: row; /* Alinha os itens lado a lado */
+    gap: 15px; /* Espaçamento entre os itens */
+    background-color: #FFFFFF;
+    border: none; /* Remove a borda */
+    border-radius: 0; /* Remove o arredondamento */
+    width: auto; /* Ajusta a largura automaticamente */
+    text-align: center;
+}
+
+header .menu ul li {
     padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.espacamento {
-    padding: 0 0px;
-    background-color: black;
-}
-
-.logotipo img {
-    width: 152.58px;
-    height: 27.08px;
+header .menu ul li:hover {
+    background-color: #f0f0f0;
 }
 
 .desconto i {
@@ -70,6 +115,11 @@ header nav button {
     padding: 4px;
     line-height: 22px;
     white-space: nowrap;
+}
+
+.logotipo img {
+    width: 152.58px;
+    height: 27.08px;
 }
 
 .menu {
@@ -542,4 +592,49 @@ footer {
     width: 70%;
     margin: 0 auto;
     text-align: center;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .menu ul {
+        display: none; /* Oculta o menu por padrão em telas menores */
+        flex-direction: column; /* Organiza os itens em coluna */
+        gap: 5px;
+        background-color: #FFFFFF;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 200px;
+        text-align: center;
+    }
+
+    header .menu ul:not(.hidden) {
+        display: flex; /* Exibe o menu quando a classe "hidden" for removida */
+    }
+}
+
+/* Ajustes para telas menores que 468px */
+@media (max-width: 468px) {
+    header .header-top {
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center;
+        gap: 10px;
+    }
+
+    header .menu-input {
+        width: 100%; /* Faz o input ocupar toda a largura */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header .menu-input input {
+        width: 90%; /* Ajusta a largura do input */
+    }
+
+    header .menu ul {
+        width: 100%; /* Faz o menu ocupar toda a largura */
+    }
 }

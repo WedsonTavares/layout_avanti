@@ -9,34 +9,35 @@
 </head>
 
 <body>
-
     <!-- Header -->
     <div class="desconto">
         Ganhe <strong>R$10,00</strong> de desconto no seu primeiro pedido. Utilize o cupom <i>DESCONTO10</i>
     </div>
     <header>
-        <div class="logotipo">
-            <img src="assets/images/logo.png" alt="AVANTI Logo">
+        <div class="header-top">
+            <div class="logotipo">
+                <img src="assets/images/logo.png" alt="AVANTI Logo">
+            </div>
+            <div class="menu-input">
+                <input type="text" id="search-input" placeholder="Digite aqui o que você procura">
+                <button id="search-button">🔍</button>
+            </div>
         </div>
-        <div class="menu-input">
-            <input type="text" id="search-input" placeholder="Digite aqui o que você procura">
-            <button id="search-button">🔍</button>
+        <div class="header-nav">
+            <nav class="menu">
+                <button id="menu-toggle" onclick="toggleMenu()">≡ Todas as Categorias</button>
+                <ul id="categorias" class="hidden">
+                    <li onclick="hideMenu()">Departamento</li>
+                    <li onclick="hideMenu()">Departamento</li>
+                    <li onclick="hideMenu()">Departamento</li>
+                    <li onclick="hideMenu()">Departamento</li>
+                    <li onclick="hideMenu()">Departamento</li>
+                    <li onclick="hideMenu()">Departamento</li>
+                    <li onclick="hideMenu()">Departamento</li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <!-- Menu -->
-    <nav class="menu">
-        <button id="menu-toggle" onclick="toggleMenu()">Todas as Categorias</button>
-        <ul id="categorias">
-            <li>Departamento</li>
-            <li>Departamento</li>
-            <li>Departamento</li>
-            <li>Departamento</li>
-            <li>Departamento</li>
-            <li>Departamento</li>
-            <li>Departamento</li>
-        </ul>
-    </nav>
 
     <section class="supersale">
         <div class="supersale-content">
