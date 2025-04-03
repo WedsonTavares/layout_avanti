@@ -14,36 +14,56 @@ body {
 }
 
 header {
-    background-color: #FFFFFF;
-    color: #333;
-    padding: 15px;
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #333; /* Texto cinza escuro */
+    height: auto; /* Ajusta a altura automaticamente */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #ddd;
+    position: fixed; /* Mantém o header fixo no topo */
+    top: 0; /* Garante que o header fique no topo da página */
+    width: 100%; /* Faz o header ocupar toda a largura */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
 }
 
 header .header-top {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: 10px;
+    justify-content: space-around; /* Espaça os elementos horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
     width: 100%;
-    max-width: 1200px;
-    margin-bottom: 10px;
+    max-width: 1280px;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha, se necessário */
+    gap: 10px; /* Adiciona espaçamento entre os elementos */
 }
 
 header .logotipo img {
-    width: 150px;
-    height: auto;
+    width: 150px; /* Ajusta o tamanho do logotipo */
+    margin-top: 10px;
 }
 
-.header-nav {
+.menu-input {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Faz o input ocupar o espaço restante */
+    max-width: 500px; /* Define um limite máximo para o tamanho */
+    margin:  5px; /* Adiciona espaçamento horizontal */
+}
+
+.user-cart {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 10px; /* Espaçamento entre os elementos */
+}
+
+/* .header-nav {
     width: 100%;
     display: flex;
-    justify-content: center; /* Centraliza a navegação */
-    margin-top: 10px; /* Espaçamento entre a linha superior e a navegação */
-}
+    justify-content: center;
+    margin-top: 10px; 
+} */
 
 header .menu {
     display: flex;
@@ -66,50 +86,33 @@ header .menu button {
 }
 
 header .menu button:hover {
-    color: #007BFF;
+    color: #007BFF; /* Azul claro no hover */
 }
 
 header .menu ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Exibe os itens em linha por padrão */
-    flex-direction: row; /* Alinha os itens lado a lado */
-    gap: 15px; /* Espaçamento entre os itens */
-    background-color: #FFFFFF;
-    border: none; /* Remove a borda */
-    border-radius: 0; /* Remove o arredondamento */
-    width: auto; /* Ajusta a largura automaticamente */
+    display: flex; 
+    flex-direction: row; 
+    gap: 10px; 
     text-align: center;
 }
 
 header .menu ul li {
     padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 15px;
 }
 
 header .menu ul li:hover {
-    background-color: #f0f0f0;
-}
-
-.desconto i {
-    font-weight: 700;
-    line-height: 22px;
-}
-
-.desconto strong {
-    width: 63px;
-    height: 16px;
-    border-radius: 4px;
-    background-color: #6220c1;
+    color: #005CFF; /* Cinza claro no hover */
+    font-weight: bold;
 }
 
 .desconto {
     width: 100%;
     font-size: 13px;
-    color: #FFFFFF;
-    background-color: #005CFF;
+    color: #FFFFFF; /* Texto branco */
+    background-color: #005CFF; /* Fundo azul */
     height: 30px;
     text-align: center;
     padding: 4px;
@@ -117,39 +120,64 @@ header .menu ul li:hover {
     white-space: nowrap;
 }
 
-.logotipo img {
-    width: 152.58px;
-    height: 27.08px;
+.desconto strong {
+    font-weight: bold;
+    background-color: #6220c1; /* Texto branco */
+    border-radius: 4px;
 }
 
-.menu {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.input-container {
+    position: relative; /* Define o contêiner como relativo para posicionar a lupa */
+    width: 100%;
 }
 
-.menu button {
-    padding: 10px 20px;
-    border: none;
+.input-container input {
+    width: 100%;
+    padding: 10px 40px 10px 15px; /* Adiciona espaço para a lupa no lado direito */
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    left: 0; /* Remove o deslocamento para a direita */
+    margin-left: 0; /* Garante que o input fique alinhado à esquerda */
 }
 
-.menu ul {
-    list-style: none;
-    padding-top: 10px;
+.input-container .search-icon {
+    position: absolute;
+    right: 10px; /* Posiciona a lupa dentro do input */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer; /* Torna a lupa clicável */
+}
+
+.user-cart img {
+    width: 25px; /* Ajusta o tamanho do ícone do usuário */
+    height: 25px;
+}
+
+.user-greeting {
     display: flex;
-    gap: 10px;
+    flex-direction: column; /* Organiza o "Olá" e o "Nome Cliente" em coluna */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 12px;
+    color: #333;
+    margin: 0;
 }
 
-.menu ul.hidden {
-    display: none;
+.user-greeting strong {
+    font-size: 12px; /* Destaque para o nome do cliente */
+    color: #000;
 }
 
-.menu ul li {
-    padding: 5px 0;
+.cart-icon img {
+    width: 30px; /* Ajusta o tamanho do ícone do carrinho */
+    height: 30px;
+    cursor: pointer; /* Torna o ícone clicável */
 }
-
 .lancamentos h2 {
     margin-bottom: 20px;
     font-size: 24px;
@@ -359,24 +387,29 @@ header .menu ul li:hover {
     justify-content: center;
     padding: 20px;
     max-width: 80%;
-    margin: 0 auto;
+    margin: 0 auto; /* Centraliza a seção */
+    margin-left: 20px; /* Adiciona margem à esquerda */
+    margin-right: 20px; /* Adiciona margem à direita */
 }
 
 .sobre-container {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    flex-wrap: nowrap; /* Garante que os itens fiquem lado a lado */
 }
 
 .sobre-imagem {
-    width: 652px;
+    width: 50%; /* Garante que a imagem ocupe metade da largura */
+    max-width: 500px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #c2c2c2;
 }
 
 .sobre-texto {
-    width: 50%;
+    width: 50%; /* Garante que o texto ocupe metade da largura */
+    max-width: 500px;
     text-align: left;
     color: #000000;
     margin: 10px;
@@ -389,7 +422,9 @@ header .menu ul li:hover {
 
 .sobre-texto p {
     font-size: 16px;
+    max-width: 800px;
     color: #000000;
+    line-height: 1.6; /* Melhora a legibilidade */
 }
 
 .invertida {
@@ -400,11 +435,16 @@ header .menu ul li:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .invertida .sobre-container {
-    flex-direction: row-reverse;
-    width: 80%;
+    flex-direction: row-reverse; /* Mantém o layout invertido */
+    width: 100%;
+    max-width: 800px;
+    gap: 20px;
+    top: 100px;
+    flex-wrap: nowrap; /* Garante que os itens fiquem lado a lado */
 }
 
 .newsletter-p {
@@ -596,45 +636,39 @@ footer {
 
 
 
-/* Responsividade */
-@media (max-width: 768px) {
-    header .menu ul {
-        display: none; /* Oculta o menu por padrão em telas menores */
-        flex-direction: column; /* Organiza os itens em coluna */
-        gap: 5px;
-        background-color: #FFFFFF;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        width: 200px;
-        text-align: center;
-    }
-
-    header .menu ul:not(.hidden) {
-        display: flex; /* Exibe o menu quando a classe "hidden" for removida */
-    }
+.menu-container {
+    display: flex;
+    align-items: center; /* Alinha o botão e as categorias verticalmente */
+    gap: 15px; /* Espaçamento entre o botão e as categorias */
 }
 
-/* Ajustes para telas menores que 468px */
-@media (max-width: 468px) {
-    header .header-top {
-        flex-direction: column; /* Organiza os itens em coluna */
-        align-items: center;
-        gap: 10px;
-    }
+#menu-toggle {
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+}
 
-    header .menu-input {
-        width: 100%; /* Faz o input ocupar toda a largura */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+#menu-toggle:hover,
+#menu-toggle.active {
+    color: #007BFF; /* Azul claro no hover e quando ativo */
+}
 
-    header .menu-input input {
-        width: 90%; /* Ajusta a largura do input */
-    }
+#categorias {
+    display: flex; /* Exibe as categorias em linha */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px; /* Espaçamento entre os itens da lista */
+}
 
-    header .menu ul {
-        width: 100%; /* Faz o menu ocupar toda a largura */
-    }
+#categorias .toggle-item {
+    display: none; /* Esconde os itens adicionais por padrão */
+}
+
+#categorias.show .toggle-item {
+    display: list-item; /* Exibe os itens adicionais quando a classe "show" é adicionada */
 }

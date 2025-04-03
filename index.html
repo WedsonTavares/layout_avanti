@@ -10,31 +10,44 @@
 
 <body>
     <!-- Header -->
-    <div class="desconto">
-        Ganhe <strong>R$10,00</strong> de desconto no seu primeiro pedido. Utilize o cupom <i>DESCONTO10</i>
-    </div>
+
     <header>
+        <div class="desconto">
+            Ganhe <strong>R$10,00</strong> de desconto no seu primeiro pedido. Utilize o cupom <i>DESCONTO10</i>
+            </div>
         <div class="header-top">
             <div class="logotipo">
                 <img src="assets/images/logo.png" alt="AVANTI Logo">
             </div>
             <div class="menu-input">
-                <input type="text" id="search-input" placeholder="Digite aqui o que você procura">
-                <button id="search-button">🔍</button>
+                <div class="input-container">
+                    <input type="text" id="search-input" placeholder="Digite aqui o que você procura">
+                    <span class="search-icon">🔍︎</span>
+                </div>
+            </div>
+            
+            <div class="user-cart">
+                <img src="./assets/icons/user.png" alt="user">
+                <p class="user-greeting">Olá, <strong>Nome Cliente!</strong></p>
+                <div class="cart-icon">
+                    <img src="assets/icons/carrinho.png" alt="Carrinho">
+                </div>
             </div>
         </div>
         <div class="header-nav">
             <nav class="menu">
-                <button id="menu-toggle" onclick="toggleMenu()">≡ Todas as Categorias</button>
-                <ul id="categorias" class="hidden">
-                    <li onclick="hideMenu()">Departamento</li>
-                    <li onclick="hideMenu()">Departamento</li>
-                    <li onclick="hideMenu()">Departamento</li>
-                    <li onclick="hideMenu()">Departamento</li>
-                    <li onclick="hideMenu()">Departamento</li>
-                    <li onclick="hideMenu()">Departamento</li>
-                    <li onclick="hideMenu()">Departamento</li>
-                </ul>
+                <div class="menu-container">
+                    <button id="menu-toggle" onclick="toggleMenu()">≡ Todas as Categorias</button>
+                    <ul id="categorias">
+                        <li>Promoções</li>
+                        <li>Roupas Femininas</li>
+                        <li>Roupas Masculinas</li>
+                        <li class="toggle-item">Cama Mesa e Banho</li>
+                        <li class="toggle-item">Cadeiras e Poltronas</li>
+                        <li class="toggle-item">Canecas e Copos</li>
+                        <li>Decoração</li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -132,19 +145,7 @@
             <img src="assets/images/caneca1.png" alt="Imagem sobre" class="sobre-imagem">
             <div class="sobre-texto">
                 <h2>Sobre Avanti</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
                     facilisis. Curabitur at sapien nec justo tincidunt fermentum.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
                     facilisis. Curabitur at sapien nec justo tincidunt fermentum.
@@ -162,20 +163,7 @@
             <img src="assets/images/caneca2.png" alt="Imagem sobre" class="sobre-imagem">
             <div class="sobre-texto">
                 <h2>Sobre Avanti</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
+                <p> Curabitur at sapien nec justo tincidunt fermentum.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
                     facilisis. Curabitur at sapien nec justo tincidunt fermentum.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
@@ -192,16 +180,7 @@
             <img src="assets/images/caneca1.png" alt="Imagem sobre" class="sobre-imagem">
             <div class="sobre-texto">
                 <h2>Sobre Avanti</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
-                    facilisis. Curabitur at sapien nec justo tincidunt fermentum.
+                <p>Curabitur at sapien nec justo tincidunt fermentum.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
                     facilisis. Curabitur at sapien nec justo tincidunt fermentum.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisi id libero tincidunt
