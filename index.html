@@ -6,52 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Avanti</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
     <!-- Header -->
-
+    
     <header>
         <div class="desconto">
             Ganhe <strong>R$10,00</strong> de desconto no seu primeiro pedido. Utilize o cupom <i>DESCONTO10</i>
-            </div>
+        </div>
         <div class="header-top">
+            <button id="menu-toggle" aria-expanded="false" aria-controls="menu-items" onclick="toggleMenu()">≡</button>
             <div class="logotipo">
                 <img src="assets/images/logo.png" alt="AVANTI Logo">
             </div>
-            <div class="menu-input">
-                <div class="input-container">
-                    <input type="text" id="search-input" placeholder="Digite aqui o que você procura">
-                    <span class="search-icon">🔍︎</span>
-                </div>
-            </div>
-            
             <div class="user-cart">
-                <img src="./assets/icons/user.png" alt="user">
-                <p class="user-greeting">Olá, <strong>Nome Cliente!</strong></p>
                 <div class="cart-icon">
                     <img src="assets/icons/carrinho.png" alt="Carrinho">
                 </div>
             </div>
         </div>
-        <div class="header-nav">
-            <nav class="menu">
-                <div class="menu-container">
-                    <button id="menu-toggle" onclick="toggleMenu()">≡ Todas as Categorias</button>
-                    <ul id="categorias">
-                        <li>Promoções</li>
-                        <li>Roupas Femininas</li>
-                        <li>Roupas Masculinas</li>
-                        <li class="toggle-item">Cama Mesa e Banho</li>
-                        <li class="toggle-item">Cadeiras e Poltronas</li>
-                        <li class="toggle-item">Canecas e Copos</li>
-                        <li>Decoração</li>
-                    </ul>
-                </div>
-            </nav>
+        <div class="menu-input">
+            <div class="input-container">
+                <input type="text" id="search-input" placeholder="Digite aqui o que você procura">
+                <span class="search-icon">🔍︎</span>
+            </div>
         </div>
+        <nav class="menu">
+            <ul id="menu-items" class="hidden">
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Roupas Femininas</a></li>
+                <li><a href="#">Roupas Masculinas</a></li>
+                <li><a href="#">Cama Mesa e Banho</a></li>
+                <li><a href="#">Cadeiras e Poltronas</a></li>
+                <li><a href="#">Canecas e Copos</a></li>
+                <li><a href="#">Decoração</a></li>
+            </ul>
+        </nav>
     </header>
-
     <section class="supersale">
         <div class="supersale-content">
             <img src="assets/images/cadeira.png" alt="Cadeira em promoção">
@@ -64,9 +57,9 @@
     </section>
 
     <!-- Lançamentos -->
-    <section class="lancamentos">
-        <h2>Lançamentos</h2>
+
         <div class="products">
+            <h2>Lançamentos</h2>
             <div class="product">
                 <div class="image-container">
                     <img src="assets/images/foto-produto.png" alt="Produto 2">
@@ -138,7 +131,7 @@
                 <button>Comprar</button>
             </div>
         </div>
-    </section>
+
 
     <section class="sobre">
         <div class="sobre-container">
@@ -286,7 +279,7 @@
             </label>
             <button type="submit">Cadastrar</button>
         </form>
-    </div>
+        </div>
     </section>
 
     <section class="sac">

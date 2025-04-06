@@ -1,0 +1,240 @@
+@media (max-width: 390px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* Alinha os elementos horizontalmente */
+        width: 100%;
+        padding: 10px;
+    }
+
+    #menu-toggle {
+        font-size: 24px;
+        /* Aumenta o tamanho do símbolo */
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: #333;
+    }
+
+    .logotipo {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        /* Centraliza o logotipo */
+    }
+
+    .logotipo img {
+        width: 100px;
+        /* Ajusta o tamanho do logotipo */
+        height: auto;
+    }
+
+    .user-cart {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .cart-icon img {
+        width: 30px;
+        /* Ajusta o tamanho do ícone do carrinho */
+        height: auto;
+    }
+
+    .menu-input {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        /* Adiciona espaçamento abaixo da linha superior */
+    }
+
+    .input-container {
+        width: 90%;
+        /* Faz o input ocupar quase toda a largura */
+        position: relative;
+    }
+
+    .input-container input {
+        width: 100%;
+        padding: 10px 40px 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .input-container .search-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #333;
+    }
+
+    #menu-items {
+        display: none;
+        /* Esconde o menu por padrão */
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #menu-items li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    #menu-items li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+    }
+
+    #menu-items li a:hover {
+        background-color: #f0f0f0;
+        color: #007BFF;
+    }
+
+    .hidden {
+        display: none;
+        /* Classe para esconder o menu */
+    }
+
+    /* ============================================= */
+
+    .supersale-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .supersale img {
+        width: 45%;
+        max-width: none;
+    }
+
+    .supersale-text {
+        width: 50%;
+        text-align: left;
+    }
+
+    .supersale-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .products {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+    
+      .products > h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+    
+      .product {
+        width: calc(50% - 0.5rem);
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    
+      .image-container {
+        position: relative;
+        width: 100%;
+      }
+    
+      .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+      }
+    
+      .image-text {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 0.65rem;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    
+      .product h3 {
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+      }
+    
+      .preco-card {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+      }
+    
+      .preco-card .preco {
+        text-decoration: line-through;
+        color: #888;
+        margin: 0;
+      }
+    
+      .preco-card strong {
+        display: block;
+        font-size: 1rem;
+        color: #000;
+        margin: 0.2rem 0;
+      }
+    
+      .desconto-off {
+        display: inline-block;
+        background-color: #10d07c;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        margin-top: 0.3rem;
+      }
+    
+      .product button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 0.4rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.9rem;
+      }
+    
+      .product button:hover {
+        background-color: #0056cc;
+      }
+}
