@@ -5,22 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Avanti</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/desktop.css">
 </head>
 
 <body>
     <!-- Header -->
-    
+
     <header>
         <div class="desconto">
-            Ganhe <strong>R$10,00</strong> de desconto no seu primeiro pedido. Utilize o cupom <i>DESCONTO10</i>
-        </div>
+            <span class="desktop-only">
+              Ganhe <strong>R$10,00</strong> de desconto no seu primeiro pedido. Utilize o cupom <i>DESCONTO10</i>
+            </span>
+            <span class="mobile-only">
+              Ganhe <strong>R$10,00</strong> de desconto no seu primeiro pedido.<br>
+              Utilize o cupom <i>DESCONTO10</i>
+            </span>
+          </div>
         <div class="header-top">
             <button id="menu-toggle" aria-expanded="false" aria-controls="menu-items" onclick="toggleMenu()">≡</button>
             <div class="logotipo">
                 <img src="assets/images/logo.png" alt="AVANTI Logo">
             </div>
+            <div class="user-icon">
+                <img src="assets/icons/user.png" alt="Usuário">
+              </div>
             <div class="user-cart">
                 <div class="cart-icon">
                     <img src="assets/icons/carrinho.png" alt="Carrinho">
@@ -58,17 +67,21 @@
 
     <!-- Lançamentos -->
 
+    <div class="products-section">
+        <div class="products-header">
+            <h2 class="lancamentos">Lançamentos</h2>
+            <button class="show-more">Ver Mais</button>
+        </div>
         <div class="products">
-            <h2>Lançamentos</h2>
             <div class="product">
                 <div class="image-container">
-                    <img src="assets/images/foto-produto.png" alt="Produto 2">
+                    <img src="assets/images/foto-produto.png" alt="Produto 1">
                     <p class="image-text">NOVO</p>
                 </div>
-                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                <h3>Camiseta Branca</h3>
                 <div class="preco-card">
                     <p class="preco">R$ 100,00</p>
-                    <p><strong> R$ 79,90</strong></p>
+                    <p><strong>R$ 79,90</strong></p>
                     <p class="desconto-off">10% OFF</p>
                     <p>ou em até <strong>10x de R$ 7,90</strong></p>
                 </div>
@@ -79,58 +92,59 @@
                     <img src="assets/images/foto-produto.png" alt="Produto 2">
                     <p class="image-text">NOVO</p>
                 </div>
-                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                <h3>Bermuda Preta</h3>
                 <div class="preco-card">
-                    <p class="preco">R$ 100,00</p>
-                    <p><strong> R$ 79,90</strong></p>
-                    <p class="desconto-off">10% OFF</p>
-                    <p>ou em até <strong>10x de R$ 7,90</strong></p>
+                    <p class="preco">R$ 120,00</p>
+                    <p><strong>R$ 99,90</strong></p>
+                    <p class="desconto-off">15% OFF</p>
+                    <p>ou em até <strong>10x de R$ 9,99</strong></p>
                 </div>
                 <button>Comprar</button>
             </div>
             <div class="product">
                 <div class="image-container">
-                    <img src="assets/images/foto-produto.png" alt="Produto 2">
+                    <img src="assets/images/foto-produto.png" alt="Produto 3">
                     <p class="image-text">NOVO</p>
                 </div>
-                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                <h3>Kit casual</h3>
                 <div class="preco-card">
-                    <p class="preco">R$ 100,00</p>
-                    <p><strong> R$ 79,90</strong></p>
-                    <p class="desconto-off">10% OFF</p>
-                    <p>ou em até <strong>10x de R$ 7,90</strong></p>
+                    <p class="preco">R$ 150,00</p>
+                    <p><strong>R$ 99,90</strong></p>
+                    <p class="desconto-off">20% OFF</p>
+                    <p>ou em até <strong>10x de R$ 12,99</strong></p>
                 </div>
                 <button>Comprar</button>
             </div>
             <div class="product">
                 <div class="image-container">
-                    <img src="assets/images/foto-produto.png" alt="Produto 2">
+                    <img src="assets/images/foto-produto.png" alt="Produto 3">
                     <p class="image-text">NOVO</p>
                 </div>
-                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                <h3>Kit casual</h3>
                 <div class="preco-card">
-                    <p class="preco">R$ 100,00</p>
-                    <p><strong> R$ 79,90</strong></p>
-                    <p class="desconto-off">10% OFF</p>
-                    <p>ou em até <strong>10x de R$ 7,90</strong></p>
+                    <p class="preco">R$ 150,00</p>
+                    <p><strong>R$ 99,90</strong></p>
+                    <p class="desconto-off">20% OFF</p>
+                    <p>ou em até <strong>10x de R$ 12,99</strong></p>
                 </div>
                 <button>Comprar</button>
             </div>
             <div class="product">
                 <div class="image-container">
-                    <img src="assets/images/foto-produto.png" alt="Produto 2">
+                    <img src="assets/images/foto-produto.png" alt="Produto 3">
                     <p class="image-text">NOVO</p>
                 </div>
-                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                <h3>Kit casual</h3>
                 <div class="preco-card">
-                    <p class="preco">R$ 100,00</p>
-                    <p><strong> R$ 79,90</strong></p>
-                    <p class="desconto-off">10% OFF</p>
-                    <p>ou em até <strong>10x de R$ 7,90</strong></p>
+                    <p class="preco">R$ 150,00</p>
+                    <p><strong>R$ 99,90</strong></p>
+                    <p class="desconto-off">20% OFF</p>
+                    <p>ou em até <strong>10x de R$ 12,99</strong></p>
                 </div>
                 <button>Comprar</button>
             </div>
         </div>
+    </div>
 
 
     <section class="sobre">

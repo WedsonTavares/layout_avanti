@@ -1,0 +1,295 @@
+/* MOBILE FIRST CSS */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desconto {
+  height: 50px;
+  background-color: #007BFF;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-only {
+  display: inline;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+#menu-toggle {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.logotipo {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.logotipo img {
+  width: 100px;
+  height: auto;
+}
+
+.cart-icon img {
+  width: 30px;
+  height: auto;
+}
+
+.menu-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.user-icon {
+  display: none;
+}
+
+.input-container {
+  width: 90%;
+  position: relative;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.input-container .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #333;
+}
+
+#menu-items {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#menu-items li {
+  padding: 10px;
+  text-align: center;
+}
+
+#menu-items li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+#menu-items li a:hover {
+  background-color: #f0f0f0;
+  color: #007BFF;
+}
+
+.hidden {
+  display: none;
+}
+
+.supersale {
+
+  background-color: #e7e7ea
+  ;
+}
+
+.supersale-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.supersale-content img {
+  width: 45%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  left: -10px;
+}
+
+.supersale-text {
+  width: 50%;
+  text-align: left;
+}
+
+.supersale-text h2 {
+  padding: 10px 0 0 0; 
+  font-size: 30px;
+  margin: 0;
+}
+
+.supersale-text p {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.supersale-text .highlight-blue {
+  font-size: 35px;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.products-header h2 {
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+  text-align: left;
+}
+
+.products-header .show-more {
+  color: black;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.products .product:nth-child(n+3) {
+  display: none;
+}
+
+.products.show-all .product {
+  display: flex;
+}
+
+.product {
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product h3 {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #333;
+  text-align: left;
+}
+
+.preco-card {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.preco-card p {
+  margin: 2px 0;
+}
+
+.preco-card .preco {
+  text-decoration: line-through;
+  color: #888;
+  display: inline-block;
+}
+
+.preco-card strong {
+  font-size: 16px;
+  color: #000;
+  display: inline-block;
+}
+
+.preco-card strong,
+.preco-card .desconto-off {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.preco-card .desconto-off {
+  float: right;
+  background-color: #10d07c;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-top: 1.3rem;
+  right: 8px;
+}
+
+.product button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.product button:hover {
+  background-color: #0056cc;
+}
+

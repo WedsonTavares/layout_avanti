@@ -1,11 +1,6 @@
-function toggleMenu() {
-    const menu = document.getElementById('menu-items');
-    const toggleButton = document.getElementById('menu-toggle');
 
-    // Alterna a visibilidade do menu
-    menu.classList.toggle('hidden');
+  document.querySelector('.show-more').addEventListener('click', function () {
+    document.querySelector('.products').classList.toggle('show-all');
+    this.textContent = this.textContent === 'Ver Mais' ? 'Ver Menos' : 'Ver Mais';
+  });
 
-    // Atualiza o atributo aria-expanded para acessibilidade
-    const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
-    toggleButton.setAttribute('aria-expanded', !isExpanded);
-}
