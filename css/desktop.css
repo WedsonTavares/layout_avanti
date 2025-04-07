@@ -1,15 +1,156 @@
-@media (min-width: 768px) {
-    .header-top {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 20px;
-    }
-  
-    .menu-input {
-      margin-top: 0;
-      width: auto;
-    }
-  
-    /* ... outros ajustes específicos */
+@media screen and (min-width: 768px) {
+  .mobile-only {
+    display: none;
   }
-  
+
+  .desktop-only {
+    display: inline;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .header-top {
+    justify-content: space-between;
+    padding: 10px 40px;
+  }
+
+  .logotipo {
+    justify-content: flex-start;
+    flex: none;
+  }
+
+  .cart-icon {
+    margin-left: auto;
+  }
+
+  .menu-input {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+
+  .user-icon {
+    display: block;
+  }
+
+  nav.menu {
+    display: block !important;
+    background-color: transparent;
+    position: static;
+    width: auto;
+  }
+
+  nav.menu ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav.menu li {
+    display: inline-block;
+  }
+
+  nav.menu li a {
+    padding: 10px 15px;
+  }
+
+  .supersale-content {
+    flex-direction: row;
+    padding: 40px;
+    justify-content: space-around;
+  }
+
+  .supersale-content img {
+    width: 300px;
+  }
+
+  .supersale-text {
+    width: 40%;
+  }
+
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 40px;
+  }
+
+  .products .product {
+    display: flex;
+  }
+
+  .products-header {
+    padding: 0 40px;
+  }
+
+  .product h3 {
+    font-size: 20px;
+  }
+
+  .product img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .sobre {
+    flex-direction: row;
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .invertida {
+    flex-direction: row-reverse;
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .sobre-imagem {
+    width: 50%;
+  }
+
+  .sobre p, .invertida p {
+    font-size: 18px;
+    padding: 0;
+  }
+
+  .icon-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .icon-item {
+    width: 45%;
+  }
+
+  .blur h4 {
+    font-size: 20px;
+  }
+
+  .form {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"] {
+    width: 100%;
+  }
+
+  .pagamentos-container {
+    max-width: 100%;
+    padding: 40px 80px;
+  }
+
+  .rodape-certificacoes {
+    font-size: 16px;
+    padding: 30px 80px;
+  }
+
+  .certificacoes-logos img {
+    width: 64px;
+  }
+
+  .sac-content {
+    max-height: 500px !important;
+  }
+}
