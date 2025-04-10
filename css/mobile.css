@@ -9,7 +9,6 @@ body {
   z-index: 9999;
 }
 
-@media (max-width: 768px) {
   /* ===================
    HEADER / MENU
 ==================== */
@@ -669,7 +668,7 @@ body {
 
     width: 52px;
   }
-}
+
 
 footer{
   margin: 20px;
