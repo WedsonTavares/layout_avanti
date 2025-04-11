@@ -10,12 +10,32 @@
     font-size: 20px;
     align-items: center;
     padding: 6px 0;
-    text-align: center;
+    text-align: left;
     background-color: #0066ff;
     color: #fff;
     width: 100%;
     height: 32px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
   }
+
+  .desktop-only,
+  .mobile-only {
+    display: inline-block;
+    animation: scroll-text 5s linear infinite;
+    white-space: nowrap;
+  }
+
+  .mobile-only {
+    white-space: normal;
+    /* permite <br> funcionar no mobile */
+    animation: scroll-text 15s linear infinite;
+    display: inline-block;
+  }
+
+  /* Animação */
+
 
   .desconto strong {
     font-weight: bold;
@@ -33,7 +53,6 @@
 
   #menu-toggle {
     display: none;
-    /* botão hamburguer some no desktop */
   }
 
   .header-top {
@@ -42,6 +61,8 @@
     justify-content: space-between;
     background-color: #fff;
     gap: 24px;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .logotipo {
@@ -164,7 +185,8 @@
     text-align: left;
     background-color: #e6e7e9;
   }
-  .supersale-text{
+
+  .supersale-text {
     max-width: 50%;
     height: 100%;
   }
@@ -179,11 +201,11 @@
   }
 
   .blue-label {
-    font-size: 2rem!important;
+    font-size: 2rem !important;
     display: block;
     margin: 1rem 0;
   }
-  
+
   .highlight-blue {
     font-size: 50px !important;
     color: #0066ff;
@@ -193,22 +215,334 @@
   }
 
 
- /* =====================
+  /* =====================
         Produtos
    ===================== */
 
-
-  .products .product {
-    display: block;
+  .products-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
   }
 
-  /* Esconde o botão "Ver mais" no desktop */
-  .show-more {
+  .products-header {
+    margin-bottom: 24px;
+    padding: 0;
+  }
+
+  .products-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .products-header .show-more {
     display: none;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 60px;
+  }
+
+  .products .product {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .products .product:nth-child(n+3) {
+    display: flex !important;
+  }
+
+  .btn-product {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .product img {
+    height: auto;
+    object-fit: cover;
+  }
+
+  .image-container .image-text {
+    top: 0px;
+    left: 0px;
+    font-size: 0.65rem;
+    padding: 2px 3px;
+  }
+
+  .product h3 {
+    text-align: center;
+  }
+
+  .preco-card .desconto-off {
+    background-color: #5ec0be;
+    width: 50px;
+  }
+
+
+
+  /* =====================
+        SOBRE/CANECAS
+   ===================== */
+
+  .sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .sobre-imagem {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+  }
+
+  .sobre-texto {
+    flex: 1;
+  }
+
+  .invertida .sobre-container {
+    flex-direction: row-reverse;
+  }
+
+  .sobre-texto h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .sobre-texto p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .icon-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .icon-text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+
+  /* =====================
+        IMG LOGO AVANTI MEIO
+   ===================== */
+
+
+  .blur h4 {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  /* =====================
+        INPUT DE CADASTRO
+   ===================== */
+  .contact-form {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .newsletter-p {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .newsletter-p a {
+    font-size: 27px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #0057ff;
+    padding: 5px;
+    text-decoration: none;
+  }
+
+  .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    background-color: #e0e0e0;
+    padding: 30px 20px;
+    border-radius: 8px;
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
+  .form input[type="text"],
+  .form input[type="email"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    min-width: 200px;
+    flex-shrink: 0;
+  }
+
+  .form .privacy-label {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #444;
+    gap: 5px;
+    white-space: nowrap;
+  }
+
+  .form .privacy-label a {
+    color: #444;
+    text-decoration: underline;
+    font-weight: normal;
+  }
+
+  .form button {
+    background-color: #0057ff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .form button:hover {
+    background-color: #0044cc;
+  }
+
+  /* ====================
+        SAC
+   ===================== */
+
+  .sac-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+  }
+
+  .sac-social {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: flex-start;
+    gap: 40px;
+
+  }
+
+  .redes-sac-social {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f5f5f5;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+
+  .sac-item {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+
+  .sac-header {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .sac-header .arrow {
+    display: none;
+  }
+
+  .sac-content {
+    max-height: none !important;
+    display: block !important;
+  }
+
+  .sac-content h5,
+  .sac-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+
+  .pagamentos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 30px;
+    background-color: #f5f5f5;
+  }
+
+  .pagamentos-container img {
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .rodape-certificacoes {
+    background-color: #f5f5f5;
+  }
+
+  footer {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 10px;
   }
 }
 
-/* mostrar todos produtos */
 
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);
+
+
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    animation: scroll-text 15s linear infinite;
+    display: inline-block !important;
+  }
+
+  .mobile-only {
+    display: none !important;
+  }
+}
 
 

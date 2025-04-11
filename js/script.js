@@ -1,77 +1,94 @@
-// Button ver mais
-document.querySelector('.show-more').addEventListener('click', function () {
-  document.querySelector('.products').classList.toggle('show-all');
-  this.textContent = this.textContent === 'Ver Mais' ? 'Ver Menos' : 'Ver Mais';
-});
+// Função principal que configura comportamentos conforme o tamanho da tela
+function setupMenu() {
+  const toggleBtn = document.getElementById('menu-toggle');
+  const navMenu = document.querySelector('nav.menu');
 
-// navbar
-const toggleBtn = document.getElementById('menu-toggle');
-const navMenu = document.querySelector('nav.menu');
-
-// Apenas ativa toggle se for mobile
-if (window.innerWidth < 768) {
-  toggleBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-  });
-
-  // Toggle de seções da nav (como Institucional, Atendimento, etc.)
-  document.querySelectorAll('.menu-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const allSections = document.querySelectorAll('.menu-section');
-
-      allSections.forEach(section => {
-        if (section !== toggle.parentElement) {
-          section.classList.remove('active');
-          section.querySelector('.submenu').classList.add('hidden');
-        }
+  if (window.innerWidth < 768) {
+    // Ativa o toggle do menu mobile, se ainda não estiver ativo
+    if (toggleBtn && !toggleBtn.dataset.bound) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
       });
+      toggleBtn.dataset.bound = true;
+    }
 
-      const section = toggle.parentElement;
-      section.classList.toggle('active');
-      section.querySelector('.submenu').classList.toggle('hidden');
-    });
-  });
-} else {
-  // Desktop: mantém tudo visível e sem toggle
-  document.querySelectorAll('.submenu').forEach(submenu => {
-    submenu.classList.remove('hidden');
-  });
+    // Dropdown do menu mobile
+    document.querySelectorAll('.menu-toggle').forEach(toggle => {
+      if (!toggle.dataset.bound) {
+        toggle.addEventListener('click', () => {
+          const allSections = document.querySelectorAll('.menu-section');
 
-  // Desktop: submenu aparece no hover (como já está no seu script)
-  document.querySelectorAll('.menu-section').forEach(section => {
-    section.addEventListener('mouseenter', () => {
-      section.classList.add('active');
-      section.querySelector('.submenu').classList.remove('hidden');
+          allSections.forEach(section => {
+            if (section !== toggle.parentElement) {
+              section.classList.remove('active');
+              section.querySelector('.submenu').classList.add('hidden');
+            }
+          });
+
+          const section = toggle.parentElement;
+          section.classList.toggle('active');
+          section.querySelector('.submenu').classList.toggle('hidden');
+        });
+        toggle.dataset.bound = true;
+      }
     });
-    section.addEventListener('mouseleave', () => {
-      section.classList.remove('active');
-      section.querySelector('.submenu').classList.add('hidden');
+
+    // Botão "Ver Mais" no mobile
+    const showMoreBtn = document.querySelector('.show-more');
+    const productsContainer = document.querySelector('.products');
+
+    if (showMoreBtn && productsContainer && !showMoreBtn.dataset.bound) {
+      showMoreBtn.addEventListener('click', function () {
+        productsContainer.classList.toggle('show-all');
+        this.textContent = this.textContent === 'Ver Mais' ? 'Ver Menos' : 'Ver Mais';
+      });
+      showMoreBtn.dataset.bound = true;
+    }
+
+  } else {
+    // Desktop: mostra todos os submenus e ativa hover
+    document.querySelectorAll('.submenu').forEach(submenu => {
+      submenu.classList.remove('hidden');
     });
-  });
+
+    document.querySelectorAll('.menu-section').forEach(section => {
+      section.addEventListener('mouseenter', () => {
+        section.classList.add('active');
+        section.querySelector('.submenu').classList.remove('hidden');
+      });
+      section.addEventListener('mouseleave', () => {
+        section.classList.remove('active');
+        section.querySelector('.submenu').classList.add('hidden');
+      });
+    });
+  }
 }
 
-// SAC toggle (funciona em qualquer resolução)
+// Chamada inicial ao carregar a página
+setupMenu();
+
+// Reaplica a configuração ao redimensionar a tela
+window.addEventListener('resize', setupMenu);
+
+// SAC (funciona em qualquer resolução)
 document.querySelectorAll('.sac-header').forEach(header => {
   header.addEventListener('click', () => {
     const content = header.nextElementSibling;
     const arrow = header.querySelector('.arrow');
-    const isOpen = content.style.maxHeight;
+    const isOpen = content.classList.contains('open');
 
+    // Fecha todos os outros
     document.querySelectorAll('.sac-content').forEach(c => {
       c.style.maxHeight = null;
+      c.classList.remove('open');
       c.previousElementSibling.querySelector('.arrow').style.transform = 'rotate(0deg)';
     });
 
-    if (!isOpen || isOpen === "0px") {
+    // Abre o atual se estava fechado
+    if (!isOpen) {
       content.style.maxHeight = content.scrollHeight + "px";
+      content.classList.add('open');
       arrow.style.transform = 'rotate(180deg)';
     }
   });
 });
-
-if (window.innerWidth < 768) {
-  document.querySelector('.show-more').addEventListener('click', function () {
-    document.querySelector('.products').classList.toggle('show-all');
-    this.textContent = this.textContent === 'Ver Mais' ? 'Ver Menos' : 'Ver Mais';
-  });
-}
